@@ -1,39 +1,49 @@
 # Prompt Chaining
 
-A local Python application that orchestrates a multi-step AI pipeline using Gemini to transform raw notes into a final deliverable (e.g., a SaaS proposal).
+A local Python project that runs a multi-step Gemini workflow to turn raw notes
+into a polished final deliverable (for example, a SaaS proposal).
 
-## Features
+## Overview
 
-- Offers built-in templates (e.g., `4C Engine`, `SaaS Proposal Engine`).
-- Takes 4 input blocks (text + an optional document for each block).
-- Executes a 5-step pipeline:
-  - Steps 1 to 4: Analysis / Structuring / Generation / Audit
-  - Step 5: Final synthesis and polishing
-- Allows asking follow-up questions on the final output.
-- Supports exporting the final proposal as a PDF.
+This project provides:
+
+- Prompt templates (for example, `4C Engine` and `SaaS Proposal Engine`)
+- Four input blocks (text, with optional supporting documents)
+- A five-call pipeline:
+  - Calls 1-4: context framing, analytical extraction, generation, and review
+  - Call 5: final synthesis and refinement
+- Follow-up Q&A on the generated output
+- PDF export for the final proposal
 
 ## Tech Stack
 
-- `streamlit` (Web interface)
-- `google-generativeai` (Gemini API)
-- `python-dotenv` (Environment variables / API key loading)
-- `pypdf` (Reading imported PDFs)
-- `reportlab` (PDF export)
+- `streamlit` for the web interface
+- `google-generativeai` for Gemini API access
+- `python-dotenv` for loading `GEMINI_API_KEY` from `.env`
+- `pypdf` for reading uploaded PDF files
+- `reportlab` for PDF generation
 
 ## Installation
 
 ```bash
 cd "/Users/eliasmld/Desktop/OPTI Prompt"
 python3 -m pip install -r requirements.txt
+```
 
-## Lancement
+Create a `.env` file in the project root:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+## Run the App
 
 ```bash
 python3 -m streamlit run app.py
 ```
 
-## Fichiers principaux
+## Key Files
 
-- `app.py`: application Streamlit principale (templates, pipeline, Q&A, export PDF)
-- `prompt_chaining_gemini.py`: version CLI du pipeline
-- `requirements.txt`: dependances Python
+- `app.py`: Streamlit interface (templates, pipeline, Q&A, PDF export)
+- `prompt_chaining_gemini.py`: command-line pipeline runner
+- `requirements.txt`: project dependencies
