@@ -7,13 +7,24 @@ into a polished final deliverable (for example, a SaaS proposal).
 
 This project provides:
 
-- Prompt templates (for example, `4C Engine` and `SaaS Proposal Engine`)
+- Four prompt templates:
+  - `4C Engine`
+  - `SaaS Proposal Engine`
+  - `TikTok Video Script Engine`
+  - `Newsletter Engine`
 - Four input blocks (text, with optional supporting documents)
 - A five-call pipeline:
   - Calls 1-4: context framing, analytical extraction, generation, and review
   - Call 5: final synthesis and refinement
 - Follow-up Q&A on the generated output
 - PDF export for the final proposal
+
+## Included 5-Step Templates
+
+- `4C Engine`: general-purpose strategic and technical synthesis
+- `SaaS Proposal Engine`: high-converting SaaS commercial proposal generation
+- `TikTok Video Script Engine`: retention-focused TikTok script creation with hook, shot list, and CTA options
+- `Newsletter Engine`: editorial newsletter generation with subject lines, preview text, and publication-ready body
 
 ## Tech Stack
 
