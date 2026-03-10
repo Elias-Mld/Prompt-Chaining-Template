@@ -1,37 +1,30 @@
 # Prompt Chaining
 
-Application Python locale qui orchestre un pipeline IA multi-etapes avec Gemini pour transformer des notes brutes en livrable final (ex: proposition SaaS).
+A local Python application that orchestrates a multi-step AI pipeline using Gemini to transform raw notes into a final deliverable (e.g., a SaaS proposal).
 
-## Ce que fait le projet
+## Features
 
-- Propose des templates (ex: `4C Engine`, `SaaS Proposal Engine`)
-- Prend 4 blocs d'entree (texte + document optionnel par bloc)
-- Execute un pipeline en 5 appels :
-  - Steps 1 a 4: analyse/structuration/generation/audit
-  - Step 5: synthese finale et polissage
-- Permet de poser des questions de suivi sur l'output final
-- Permet d'exporter la proposition en PDF
+- Offers built-in templates (e.g., `4C Engine`, `SaaS Proposal Engine`).
+- Takes 4 input blocks (text + an optional document for each block).
+- Executes a 5-step pipeline:
+  - Steps 1 to 4: Analysis / Structuring / Generation / Audit
+  - Step 5: Final synthesis and polishing
+- Allows asking follow-up questions on the final output.
+- Supports exporting the final proposal as a PDF.
 
-## Stack
+## Tech Stack
 
-- `streamlit` (interface web)
-- `google-generativeai` (API Gemini)
-- `python-dotenv` (chargement cle API)
-- `pypdf` (lecture PDF importes)
-- `reportlab` (export PDF)
+- `streamlit` (Web interface)
+- `google-generativeai` (Gemini API)
+- `python-dotenv` (Environment variables / API key loading)
+- `pypdf` (Reading imported PDFs)
+- `reportlab` (PDF export)
 
 ## Installation
 
 ```bash
 cd "/Users/eliasmld/Desktop/OPTI Prompt"
 python3 -m pip install -r requirements.txt
-```
-
-Creer un fichier `.env`:
-
-```env
-GEMINI_API_KEY=your_key_here
-```
 
 ## Lancement
 
