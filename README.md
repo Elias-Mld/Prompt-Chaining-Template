@@ -37,7 +37,6 @@ This project provides:
 ## Installation
 
 ```bash
-cd "/Users/eliasmld/Desktop/OPTI Prompt"
 python3 -m pip install -r requirements.txt
 ```
 
