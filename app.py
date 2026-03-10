@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Streamlit app for a 4C mental-map style agentic pipeline.
+Streamlit app for templates agentic pipeline.
 
 Run:
     python3 -m streamlit run app.py
